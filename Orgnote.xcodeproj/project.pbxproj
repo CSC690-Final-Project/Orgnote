@@ -14,6 +14,8 @@
 		0BE32B9921AE34D300E8A99C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE32B9721AE34D300E8A99C /* LaunchScreen.storyboard */; };
 		0BE32BA421AE34D300E8A99C /* OrgnoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE32BA321AE34D300E8A99C /* OrgnoteTests.swift */; };
 		0BE32BAF21AE34D300E8A99C /* OrgnoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE32BAE21AE34D300E8A99C /* OrgnoteUITests.swift */; };
+		CF337D7C06627BBB3124D9C5 /* Pods_Orgnote_OrgnoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA721ADB96729F67E043C72C /* Pods_Orgnote_OrgnoteTests.framework */; };
+		F210C4BE1A248EE0F3ADAD65 /* Pods_Orgnote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574249ACA6360F8FAC4D3E39 /* Pods_Orgnote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,12 @@
 		0BE32BAA21AE34D300E8A99C /* OrgnoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgnoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE32BAE21AE34D300E8A99C /* OrgnoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgnoteUITests.swift; sourceTree = "<group>"; };
 		0BE32BB021AE34D300E8A99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43A530B4E725D8331D768AF7 /* Pods-Orgnote-OrgnoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orgnote-OrgnoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orgnote-OrgnoteTests/Pods-Orgnote-OrgnoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		574249ACA6360F8FAC4D3E39 /* Pods_Orgnote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orgnote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6010535E74CC82A717898DD5 /* Pods-Orgnote-OrgnoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orgnote-OrgnoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orgnote-OrgnoteTests/Pods-Orgnote-OrgnoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		90FAC5858EFB3FD85207A746 /* Pods-Orgnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orgnote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orgnote/Pods-Orgnote.debug.xcconfig"; sourceTree = "<group>"; };
+		B771B990E1B7650DF9F824C5 /* Pods-Orgnote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orgnote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orgnote/Pods-Orgnote.release.xcconfig"; sourceTree = "<group>"; };
+		BA721ADB96729F67E043C72C /* Pods_Orgnote_OrgnoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orgnote_OrgnoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F210C4BE1A248EE0F3ADAD65 /* Pods_Orgnote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF337D7C06627BBB3124D9C5 /* Pods_Orgnote_OrgnoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,8 @@
 				0BE32BA221AE34D300E8A99C /* OrgnoteTests */,
 				0BE32BAD21AE34D300E8A99C /* OrgnoteUITests */,
 				0BE32B8C21AE34D000E8A99C /* Products */,
+				3A173930A21A49DA76F5D774 /* Pods */,
+				7893470044C604C82C39D7EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +137,26 @@
 			path = OrgnoteUITests;
 			sourceTree = "<group>";
 		};
+		3A173930A21A49DA76F5D774 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90FAC5858EFB3FD85207A746 /* Pods-Orgnote.debug.xcconfig */,
+				B771B990E1B7650DF9F824C5 /* Pods-Orgnote.release.xcconfig */,
+				43A530B4E725D8331D768AF7 /* Pods-Orgnote-OrgnoteTests.debug.xcconfig */,
+				6010535E74CC82A717898DD5 /* Pods-Orgnote-OrgnoteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7893470044C604C82C39D7EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				574249ACA6360F8FAC4D3E39 /* Pods_Orgnote.framework */,
+				BA721ADB96729F67E043C72C /* Pods_Orgnote_OrgnoteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BE32BB321AE34D300E8A99C /* Build configuration list for PBXNativeTarget "Orgnote" */;
 			buildPhases = (
+				5674A7F52FCCCAD866BB4F43 /* [CP] Check Pods Manifest.lock */,
 				0BE32B8721AE34D000E8A99C /* Sources */,
 				0BE32B8821AE34D000E8A99C /* Frameworks */,
 				0BE32B8921AE34D000E8A99C /* Resources */,
@@ -149,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BE32BB621AE34D300E8A99C /* Build configuration list for PBXNativeTarget "OrgnoteTests" */;
 			buildPhases = (
+				0713AF281E7C1452B9FBB676 /* [CP] Check Pods Manifest.lock */,
 				0BE32B9B21AE34D300E8A99C /* Sources */,
 				0BE32B9C21AE34D300E8A99C /* Frameworks */,
 				0BE32B9D21AE34D300E8A99C /* Resources */,
+				53E672FD7BDF5EB7B9A39533 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +285,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0713AF281E7C1452B9FBB676 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orgnote-OrgnoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53E672FD7BDF5EB7B9A39533 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Orgnote-OrgnoteTests/Pods-Orgnote-OrgnoteTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Orgnote-OrgnoteTests/Pods-Orgnote-OrgnoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5674A7F52FCCCAD866BB4F43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orgnote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BE32B8721AE34D000E8A99C /* Sources */ = {
@@ -430,6 +536,7 @@
 		};
 		0BE32BB421AE34D300E8A99C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90FAC5858EFB3FD85207A746 /* Pods-Orgnote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +555,7 @@
 		};
 		0BE32BB521AE34D300E8A99C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B771B990E1B7650DF9F824C5 /* Pods-Orgnote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +574,7 @@
 		};
 		0BE32BB721AE34D300E8A99C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43A530B4E725D8331D768AF7 /* Pods-Orgnote-OrgnoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +596,7 @@
 		};
 		0BE32BB821AE34D300E8A99C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6010535E74CC82A717898DD5 /* Pods-Orgnote-OrgnoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
