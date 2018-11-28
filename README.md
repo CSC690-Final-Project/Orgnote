@@ -1,23 +1,25 @@
 # *Orgnote*
 
-**Orgnote** is an app that help users to track items and inventories with storage locations.
+**Orgnote** is an app that help users to track items and inventories base on storage locations.
 
 ## User Stories
 
 The following **required** user stories are complete:
 
 - [ ] User can add an item with item name, category, location, description. 
-- [ ] The system can save added item in device. 
-- [ ] The user can view all item in list view.
-- [ ] The user can take add a photo per item.
-- [ ] The user can view item details. 
+- [ ] The app can save added item in device. 
+- [ ] User can view all item in list view.
+- [ ] User can take add a photo per item.
+- [ ] User can view item details. 
+- [ ] User can delete item.
 
 The following **stretch** user stories are implemented:
 
-- [ ] User can search item in list view.
-- [ ] User can view items in list filter by category.
+- [ ] User can search item in all item list view.
+- [ ] User can search location in location list view. 
 - [ ] User can view items in list filter by locations.
-- [ ] User can edit and modify items.
+- [ ] User can edit and modify item data, such as location, name, change photo, description.
+- [ ] User can clear all data in Setting
 
 
 ## Workflow
