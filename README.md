@@ -40,6 +40,8 @@ The following **stretch** user stories are implemented:
 
 ## Wireframe
 
+<img src='https://github.com/CSC690-Final-Project/Orgnote/blob/master/demo%20src/wireframe.png' title='Wireframe' width='' alt='Wireframe' />
+
 
 ## Demo Walkthrough
 
