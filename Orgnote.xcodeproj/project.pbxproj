@@ -15,6 +15,8 @@
 		0BE32BA421AE34D300E8A99C /* OrgnoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE32BA321AE34D300E8A99C /* OrgnoteTests.swift */; };
 		0BE32BAF21AE34D300E8A99C /* OrgnoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE32BAE21AE34D300E8A99C /* OrgnoteUITests.swift */; };
 		CF337D7C06627BBB3124D9C5 /* Pods_Orgnote_OrgnoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA721ADB96729F67E043C72C /* Pods_Orgnote_OrgnoteTests.framework */; };
+		DA78D3E321B0F65B00776E8A /* CreateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78D3E221B0F65B00776E8A /* CreateItemViewController.swift */; };
+		DA78D3E521B0FA0B00776E8A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78D3E421B0FA0B00776E8A /* Item.swift */; };
 		F210C4BE1A248EE0F3ADAD65 /* Pods_Orgnote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574249ACA6360F8FAC4D3E39 /* Pods_Orgnote.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		90FAC5858EFB3FD85207A746 /* Pods-Orgnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orgnote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orgnote/Pods-Orgnote.debug.xcconfig"; sourceTree = "<group>"; };
 		B771B990E1B7650DF9F824C5 /* Pods-Orgnote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orgnote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orgnote/Pods-Orgnote.release.xcconfig"; sourceTree = "<group>"; };
 		BA721ADB96729F67E043C72C /* Pods_Orgnote_OrgnoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orgnote_OrgnoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA78D3E221B0F65B00776E8A /* CreateItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemViewController.swift; sourceTree = "<group>"; };
+		DA78D3E421B0FA0B00776E8A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +113,14 @@
 		0BE32B8D21AE34D000E8A99C /* Orgnote */ = {
 			isa = PBXGroup;
 			children = (
+				DA78D3E121B0F10F00776E8A /* Controllers */,
 				0BE32B8E21AE34D000E8A99C /* AppDelegate.swift */,
 				0BE32B9021AE34D000E8A99C /* ViewController.swift */,
 				0BE32B9221AE34D000E8A99C /* Main.storyboard */,
 				0BE32B9521AE34D300E8A99C /* Assets.xcassets */,
 				0BE32B9721AE34D300E8A99C /* LaunchScreen.storyboard */,
 				0BE32B9A21AE34D300E8A99C /* Info.plist */,
+				DA78D3E421B0FA0B00776E8A /* Item.swift */,
 			);
 			path = Orgnote;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 				BA721ADB96729F67E043C72C /* Pods_Orgnote_OrgnoteTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA78D3E121B0F10F00776E8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA78D3E221B0F65B00776E8A /* CreateItemViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA78D3E521B0FA0B00776E8A /* Item.swift in Sources */,
 				0BE32B9121AE34D000E8A99C /* ViewController.swift in Sources */,
+				DA78D3E321B0F65B00776E8A /* CreateItemViewController.swift in Sources */,
 				0BE32B8F21AE34D000E8A99C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
