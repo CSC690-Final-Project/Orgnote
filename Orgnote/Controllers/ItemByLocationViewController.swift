@@ -14,6 +14,7 @@ class ItemByLocationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var items:[[String:Any]] = []
+    var location:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,10 @@ class ItemByLocationViewController: UIViewController {
         //print("itembylocation view")
         tableView.dataSource = self
         tableView.delegate = self
+        print(location)
+        //use the location to get the "items" by location
+        //items = UserDefaults.standard.object(forKey: location) as![[String:Any]]
+        
     }
     
 
@@ -63,7 +68,9 @@ extension ItemByLocationViewController: UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemCell
         //let location = Locations[indexPath.row]
         let item = items[indexPath.row]
-        cell.nameLabel.text = item["name"] as! String
+        cell.nameLabel.text = item["name"] as? String
+        cell.categoryLabel.text = item["category"] as? String
+        cell.descriptionLabel.text = item["description"] as? String
         //print("here")
         
         
