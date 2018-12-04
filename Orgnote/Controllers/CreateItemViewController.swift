@@ -46,10 +46,11 @@ class CreateItemViewController: UIViewController {
         //[name: String, category: String, location: String, description: String]
         let item = Item(name: nameInput.text!, category: categoryInput.text!, location: locationInput.text!, description: descriptionInput.text!)
         
-        print(item.itemData)
-        print(item.itemData["location"] as! String)
+        //print(item.itemData)
+        //print(item.itemData["location"] as! String)
         let location = item.itemData["location"] as! String
-        updateItem(location, item.itemData)
+        let itemData = item.itemData
+        updateItem(location, itemData)
         dismiss(animated: true, completion: nil)
         
 //        if location in location list{
@@ -63,23 +64,23 @@ class CreateItemViewController: UIViewController {
 //        save to list of location to device
     }
     
-    func updateItem(_ location: String, _ item: [String:Any]){
+    func updateItem(_ location: String, _ itemData: [String:Any]){
         if Locations.contains(location) {
             //get the list of the location, update the list, and then save
             itemsByLocation = UserDefaults.standard.object(forKey: location) as![[String:Any]]
-            print("location exist")
-            itemsByLocation.append(item)
+            //print("location exist")
+            itemsByLocation.append(itemData)
+            print(itemsByLocation)
             //save itemsByLocation
             UserDefaults.standard.set(itemsByLocation, forKey: location)
             
         }else{
             //append and save
             Locations.append(location)
-            print("locations: ", Locations )
-            UserDefaults.standard.set(Locations, forKey: "Locations")
-            itemsByLocation.append(item)
-            print("itemsByLocation: ", itemsByLocation)
             
+            UserDefaults.standard.set(Locations, forKey: "Locations")
+            itemsByLocation.append(itemData)
+
             UserDefaults.standard.set(itemsByLocation, forKey: location)
             
             
