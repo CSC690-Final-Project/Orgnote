@@ -21,6 +21,7 @@
 		DAB658C521B65EAE00549E82 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB658C421B65EAE00549E82 /* LocationViewController.swift */; };
 		DAB658C721B6663D00549E82 /* ItemByLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB658C621B6663D00549E82 /* ItemByLocationViewController.swift */; };
 		DAB658C921B6665B00549E82 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB658C821B6665B00549E82 /* ItemCell.swift */; };
+		DAB658CB21B66B4A00549E82 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB658CA21B66B4A00549E82 /* ItemDetailViewController.swift */; };
 		F210C4BE1A248EE0F3ADAD65 /* Pods_Orgnote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574249ACA6360F8FAC4D3E39 /* Pods_Orgnote.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		DAB658C421B65EAE00549E82 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		DAB658C621B6663D00549E82 /* ItemByLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemByLocationViewController.swift; sourceTree = "<group>"; };
 		DAB658C821B6665B00549E82 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		DAB658CA21B66B4A00549E82 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				DAB658C421B65EAE00549E82 /* LocationViewController.swift */,
 				DAB658C621B6663D00549E82 /* ItemByLocationViewController.swift */,
 				DAB658C821B6665B00549E82 /* ItemCell.swift */,
+				DAB658CA21B66B4A00549E82 /* ItemDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				DAB658C321B64EA200549E82 /* LocationViewCell.swift in Sources */,
 				DA78D3E521B0FA0B00776E8A /* Item.swift in Sources */,
 				0BE32B9121AE34D000E8A99C /* ViewController.swift in Sources */,
+				DAB658CB21B66B4A00549E82 /* ItemDetailViewController.swift in Sources */,
 				DAB658C721B6663D00549E82 /* ItemByLocationViewController.swift in Sources */,
 				DA78D3E321B0F65B00776E8A /* CreateItemViewController.swift in Sources */,
 				0BE32B8F21AE34D000E8A99C /* AppDelegate.swift in Sources */,
