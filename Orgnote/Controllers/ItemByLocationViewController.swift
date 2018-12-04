@@ -21,7 +21,7 @@ class ItemByLocationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         //exmaple:
-        items = [["id": 1, "name": "1", "category": "1", "description": "1", "location": "hi"], ["id": 2, "name": "2", "category": "2", "description": "2", "location": "hi"]]
+        items = [["id": 1, "name": "1", "category": "1", "description": "1", "location": "hi"], ["id": 2, "name": "2", "category": "2", "description": "Description: A very nice sofa, i bought it from ikea at 2010. there are some sratches that made by Ruby when she was a little puppy.", "location": "hi"]]
         //print("itembylocation view")
         tableView.dataSource = self
         tableView.delegate = self
