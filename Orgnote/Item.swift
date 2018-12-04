@@ -8,16 +8,18 @@
 
 import Foundation
 
+//UserDefaults.standard.set(toDoList, forKey: "ToDoList")
+
 class Item {
     
     var itemData: [String:Any]
 
-    var id: Int = 0
+    static var id: Int = 0
     
     init(name: String, category: String, location: String, description: String) {
         
-        self.id += 1
-        self.itemData = ["id":self.id, "name":name, "category": category, "location":location, "description": description]
+        Item.id += 1
+        self.itemData = ["id":Item.id, "name":name, "category": category, "location":location, "description": description]
     }
     
     
