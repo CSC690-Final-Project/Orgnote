@@ -21,8 +21,9 @@ class CreateItemViewController: UIViewController {
     @IBOutlet weak var categoryInput: UITextField!
     
     @IBOutlet weak var locationInput: UITextField!
-    @IBOutlet weak var descriptionInput: UITextField!
+    //@IBOutlet weak var descriptionInput: UITextField!
     
+    @IBOutlet weak var descriptionInput: UITextView!
     
     
     var itemsByLocation: [[String:Any]] = []
@@ -31,6 +32,8 @@ class CreateItemViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
     }
     
     
@@ -44,11 +47,15 @@ class CreateItemViewController: UIViewController {
     
     func addItem(){
         //[name: String, category: String, location: String, description: String]
-        let item = Item(name: nameInput.text!, category: categoryInput.text!, location: locationInput.text!, description: descriptionInput.text!)
+        let name = nameInput.text! as String
+        let category = categoryInput.text
+        let location = locationInput.text! as String
+        let description = descriptionInput.text
+        let item = Item(name: name, category: category ?? "None", location: location, description: description ?? "None")
         
         //print(item.itemData)
         //print(item.itemData["location"] as! String)
-        let location = item.itemData["location"] as! String
+        //let location = item.itemData["location"] as! String
         let itemData = item.itemData
         updateItem(location, itemData)
         dismiss(animated: true, completion: nil)

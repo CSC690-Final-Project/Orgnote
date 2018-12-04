@@ -19,8 +19,9 @@ class ItemDetailViewController: UIViewController {
     
     @IBOutlet weak var locationLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    //@IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var descriptionTextView: UITextView!
     var item:[String:Any]=[:]
 
     override func viewDidLoad() {
@@ -34,7 +35,7 @@ print(item)
         nameLabel.text = item["name"] as? String
         categoryLabel.text = item["category"] as? String
         locationLabel.text = item["location"] as? String
-        descriptionLabel.text = item["description"] as? String
+        descriptionTextView.text = item["description"] as? String
     }
     
 
