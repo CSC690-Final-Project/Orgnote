@@ -206,7 +206,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="locationLabel" destination="TBy-17-FtH" id="D2C-X9-PWA"/>
-                                            <segue destination="asT-BU-JUq" kind="show" id="4OG-DG-I3e"/>
+                                            <segue destination="asT-BU-JUq" kind="show" identifier="ItemByLocationSegue" id="4OG-DG-I3e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -285,7 +285,7 @@
                                             <outlet property="categoryLabel" destination="nSh-k8-005" id="eOM-44-plf"/>
                                             <outlet property="descriptionLabel" destination="aSf-YN-j9k" id="bac-fM-YO5"/>
                                             <outlet property="nameLabel" destination="Kts-Qa-od5" id="M76-ao-AKu"/>
-                                            <segue destination="aXJ-IH-w6g" kind="show" id="wdX-w3-UVZ"/>
+                                            <segue destination="aXJ-IH-w6g" kind="show" identifier="ItemSegue" id="wdX-w3-UVZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

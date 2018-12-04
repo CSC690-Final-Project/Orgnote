@@ -27,15 +27,29 @@ class ItemByLocationViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        
+        
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let item = items[indexPath.row]
+            let itemDetailViewController = segue.destination as! ItemDetailViewController
+            itemDetailViewController.item = item
+            //itemDetailViewController.nameLabel.text = item["name"] as? String
+            //itemDetailViewController.categoryLabel.text = item["category"] as? String
+            //itemDetailViewController.locationLabel.text = item["location"] as? String
+            //itemDetailViewController.descriptionLabel.text = item["description"] as? String
+        }
+        
     }
-    */
+    
 
 }
 

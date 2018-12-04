@@ -21,11 +21,20 @@ class ItemDetailViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    var item:[String:Any]=[:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print(item)
         // Do any additional setup after loading the view.
+        getData()
+    }
+    
+    func getData(){
+        nameLabel.text = item["name"] as? String
+        categoryLabel.text = item["category"] as? String
+        locationLabel.text = item["location"] as? String
+        descriptionLabel.text = item["description"] as? String
     }
     
 
