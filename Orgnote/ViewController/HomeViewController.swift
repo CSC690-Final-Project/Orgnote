@@ -7,14 +7,46 @@
 //
 
 import UIKit
+import AVFoundation
 
-class HomeViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class HomeViewController: UIViewController {
+    
+    var captureSession = AVCaptureSession()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupCaptureSession()
+        setupDevice()
+        setupInputOutput()
+        setupPreviewLayer()
+        startRunningCaptureSession()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    func setupCaptureSession(){
+    
+    }
+    
+    func setupDevice(){
+        
+    }
+    
+    func setupInputOutput(){
+        
+    }
+    
+    func setupPreviewLayer(){
+        
+    }
+    
+    func startRunningCaptureSession(){
+        
+    }
+    
     
     @IBAction func cameraButton(_ sender: UIButton) {
         
