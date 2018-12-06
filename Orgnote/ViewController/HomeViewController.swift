@@ -12,6 +12,11 @@ import AVFoundation
 class HomeViewController: UIViewController {
     
     var captureSession = AVCaptureSession()
+    
+    //declare front, back camera and current camera
+    var frontCamera: AVCaptureDevice?
+    var backCamera: AVCaptureDevice?
+    var currentCamera: AVCaptureDevice?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +31,26 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //preset photo
+    //using the AVCaptureSession to preset the session for taking photo in full resolution
     func setupCaptureSession(){
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
         
     }
     
+    //creating the AVCaptureDevice object to represent the autual iOS devices cameras, "discovery seesion" is to find and monitor avaiable capture devices.
     func setupDevice(){
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+        let devices = deviceDiscoverySession.devices
         
+        for device in devices{
+            if device.position == AVCaptureDevice.Position.back{
+                backCamera = device
+            }else if device.position == AVCaptureDevice.Position.front{
+                frontCamera = device
+            }
+        }
+        
+        currentCamera = backCamera
     }
     
     func setupInputOutput(){
