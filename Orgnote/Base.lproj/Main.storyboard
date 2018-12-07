@@ -250,6 +250,9 @@
                                     <constraint firstAttribute="height" constant="56" id="K00-pn-nR6"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2XC-7g-Xgl" id="PwC-L9-Glo"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,6 +269,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gZ4-nf-IXJ"/>
                     <connections>
+                        <outlet property="locationSearchBar" destination="x0f-FR-HRt" id="hg2-sK-Vgl"/>
                         <outlet property="tableView" destination="ep3-VI-Yb1" id="CS9-BK-Mpy"/>
                     </connections>
                 </viewController>
@@ -368,6 +372,7 @@
                         <viewLayoutGuide key="safeArea" id="YaE-BQ-wry"/>
                     </view>
                     <connections>
+                        <outlet property="itemSearchBar" destination="3DN-xl-Als" id="3VT-iT-AgJ"/>
                         <outlet property="tableView" destination="1Zb-8j-Rs8" id="uAR-ON-uVi"/>
                     </connections>
                 </viewController>

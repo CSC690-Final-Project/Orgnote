@@ -16,6 +16,12 @@ class ItemByLocationViewController: UIViewController {
     var items:[[String:Any]] = []
     var location:String = ""
     
+    
+    @IBOutlet weak var itemSearchBar: UISearchBar!
+    var searchItems:[[String:Any]] = []
+    var searching = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
