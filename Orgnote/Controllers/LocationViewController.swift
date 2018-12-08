@@ -24,10 +24,14 @@ class LocationViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //example
-        Locations = ["San Francisco","California", "San Jose", "San Diego", "San Francisco State"]
+        //Locations = ["San Francisco","California", "San Jose", "San Diego", "San Francisco State"]
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     // MARK: - Navigation

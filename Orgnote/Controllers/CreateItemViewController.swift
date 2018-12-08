@@ -26,9 +26,21 @@ class CreateItemViewController: UIViewController {
     
     @IBOutlet weak var descriptionInput: UITextView!
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
+    
+    
+    @IBAction func saveButton(_ sender: Any) {
+        if isItemEditing {
+            updateEditedItem()
+        }else{
+            addItem()
+        }
+    }
     
     var itemsByLocation: [[String:Any]] = []
+    var isItemEditing = false
+    var editingItem:[String:Any]=[:]
     
     
     func getDate()->String{
@@ -47,7 +59,12 @@ class CreateItemViewController: UIViewController {
 
         //chooseLocation()
         //chooseCategory()
-        
+        if isItemEditing{
+            nameInput.text = editingItem["name"] as? String
+            categoryInput.text = editingItem["category"] as? String
+            locationInput.text = editingItem["location"] as? String
+            descriptionInput.text = editingItem["description"] as? String
+        }
         
     }
     
@@ -65,7 +82,15 @@ class CreateItemViewController: UIViewController {
     }
     
     @IBAction func addButton(_ sender: Any) {
-        addItem()
+        
+        
+        if isItemEditing {
+            updateEditedItem()
+        }else{
+            addItem()
+        }
+        
+        
     }
     
     func showAlert(title: String, msg: String){
@@ -119,7 +144,22 @@ class CreateItemViewController: UIViewController {
             //get the list of the location, update the list, and then save
             itemsByLocation = UserDefaults.standard.object(forKey: location) as![[String:Any]]
             //print("location exist")
-            itemsByLocation.append(itemData)
+            if isItemEditing {
+                //this code suppose for editing, however currently not working
+                for var item in itemsByLocation{
+                    if item["id"] as! Int == itemData["id"] as! Int{
+                        for (key, value) in itemData{
+                            item[key] = value
+                        }
+                        
+                    }
+                }
+                
+                
+            }else{
+                itemsByLocation.append(itemData)
+            }
+            
             print(itemsByLocation)
             //save itemsByLocation
             UserDefaults.standard.set(itemsByLocation, forKey: location)
@@ -138,7 +178,29 @@ class CreateItemViewController: UIViewController {
         
     }
     
-    
+    func updateEditedItem(){
+        let oldLocation = editingItem["location"] as? String
+        let newLocation = locationInput.text
+        
+        if ( newLocation != oldLocation){
+            //remove item in old location
+            var itemsByOldLocation = UserDefaults.standard.object(forKey: oldLocation!) as![[String:Any]]
+            for item in itemsByOldLocation{
+                itemsByOldLocation.removeAll(keepingCapacity: item["id"] as! Int == editingItem["id"] as! Int)
+            }
+            //add new location or update location
+            editingItem["location"] = newLocation
+            
+        }
+        
+        editingItem["name"] = nameInput.text
+        editingItem["category"] = categoryInput.text
+        editingItem["description"] = descriptionInput.text
+        
+        updateItem(newLocation!, editingItem)
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     
     func chooseLocation(){

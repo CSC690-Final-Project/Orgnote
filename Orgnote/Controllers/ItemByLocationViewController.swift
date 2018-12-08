@@ -27,14 +27,18 @@ class ItemByLocationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         //exmaple:
-        items = [["id": 1, "name": "oven", "category": "1", "description": "1", "location": "hi", "created_date": "2018-12-07"], ["id": 2, "name": "Box", "category": "2", "description": "Description: A very nice sofa, i bought it from ikea at 2010. there are some sratches that made by Ruby when she was a little puppy.", "location": "hi", "created_date": "2018-12-07"]]
+        //items = [["id": 1, "name": "oven", "category": "1", "description": "1", "location": "hi", "created_date": "2018-12-07"], ["id": 2, "name": "Box", "category": "2", "description": "Description: A very nice sofa, i bought it from ikea at 2010. there are some sratches that made by Ruby when she was a little puppy.", "location": "hi", "created_date": "2018-12-07"]]
         //print("itembylocation view")
         tableView.dataSource = self
         tableView.delegate = self
-        print(location)
+        //print(location)
         //use the location to get the "items" by location
-        //items = UserDefaults.standard.object(forKey: location) as![[String:Any]]
+        items = UserDefaults.standard.object(forKey: location) as![[String:Any]]
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     // MARK: - Navigation
