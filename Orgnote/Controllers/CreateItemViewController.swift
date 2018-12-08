@@ -45,30 +45,41 @@ class CreateItemViewController: UIViewController {
         addItem()
     }
     
+    func showAlert(title: String, msg: String){
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func addItem(){
         //[name: String, category: String, location: String, description: String]
-        let name = nameInput.text! as String
-        let category = categoryInput.text
-        let location = locationInput.text! as String
-        let description = descriptionInput.text
-        let item = Item(name: name, category: category ?? "None", location: location, description: description ?? "None")
+        var name:String = ""
+        var location: String = ""
         
-        //print(item.itemData)
-        //print(item.itemData["location"] as! String)
-        //let location = item.itemData["location"] as! String
-        let itemData = item.itemData
-        updateItem(location, itemData)
-        dismiss(animated: true, completion: nil)
+        if (((nameInput?.text) != "") && ((locationInput?.text) != "")) {
+            name = nameInput.text!
+            location = locationInput.text!
+            
+            let category = categoryInput.text ?? ""
+            let description = descriptionInput.text ?? ""
+            let item = Item(name: name, category: category, location: location, description: description)
+            
+            print(item.itemData)
+            //print(item.itemData["location"] as! String)
+            //let location = item.itemData["location"] as! String
+            let itemData = item.itemData
+            updateItem(location, itemData)
+            dismiss(animated: true, completion: nil)
+            
+        }else{
+            if ((nameInput?.text) == ""){
+                showAlert(title: "Invalid Input", msg: "Please Enter Name")
+            }else if ((locationInput?.text) == ""){
+                showAlert(title: "Invalid Input", msg: "Please Enter Location")
+            }
+        }
         
-//        if location in location list{
-//            load the list of the location
-//            add item to the list
-//
-//        }else{
-//            update location to location list
-//            as new location list
-//        }
-//        save to list of location to device
     }
     
     func updateItem(_ location: String, _ itemData: [String:Any]){
