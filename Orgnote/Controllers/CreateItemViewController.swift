@@ -9,6 +9,7 @@
 import UIKit
 
 var Locations: [String] = []
+var Categories: [String] = []
 
 class CreateItemViewController: UIViewController {
     
@@ -32,8 +33,20 @@ class CreateItemViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //sample locations, delete after
+        //Categories = ["San Francisco","California", "San Jose", "San Diego", "San Francisco State"]
+
+        //chooseLocation()
+        //chooseCategory()
         
-        
+    }
+    
+    @IBAction func selectLocation(_ sender: Any) {
+        chooseLocation()
+    }
+    
+    @IBAction func selectCategory(_ sender: Any) {
+        chooseCategory()
     }
     
     
@@ -57,11 +70,18 @@ class CreateItemViewController: UIViewController {
         var name:String = ""
         var location: String = ""
         
+        
         if (((nameInput?.text) != "") && ((locationInput?.text) != "")) {
             name = nameInput.text!
             location = locationInput.text!
             
             let category = categoryInput.text ?? ""
+            //update Category list, if not in Category list
+            if category != "" && !Categories.contains(category){
+                Categories.append(category)
+            }
+            
+            
             let description = descriptionInput.text ?? ""
             let item = Item(name: name, category: category, location: location, description: description)
             
@@ -83,6 +103,7 @@ class CreateItemViewController: UIViewController {
     }
     
     func updateItem(_ location: String, _ itemData: [String:Any]){
+        
         if Locations.contains(location) {
             //get the list of the location, update the list, and then save
             itemsByLocation = UserDefaults.standard.object(forKey: location) as![[String:Any]]
@@ -106,6 +127,38 @@ class CreateItemViewController: UIViewController {
         
     }
     
+    
+    
+    
+    func chooseLocation(){
+        let alert = UIAlertController(title: "Locations", message: "Choose a location:", preferredStyle: .actionSheet)
+        
+        func handler(_ act: UIAlertAction){
+            locationInput.text = act.title
+        }
+        
+        for location in Locations{
+            alert.addAction(UIAlertAction(title: location, style: .default, handler: handler))
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func chooseCategory(){
+        let alert = UIAlertController(title: "Categories", message: "Choose a category:", preferredStyle: .actionSheet)
+        
+        func handler(_ act: UIAlertAction){
+            categoryInput.text = act.title
+        }
+        
+        for category in Categories{
+            alert.addAction(UIAlertAction(title: category, style: .default, handler: handler))
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
     
 
     /*
