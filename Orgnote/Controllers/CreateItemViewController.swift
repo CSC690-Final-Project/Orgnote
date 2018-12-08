@@ -27,7 +27,16 @@ class CreateItemViewController: UIViewController {
     @IBOutlet weak var descriptionInput: UITextView!
     
     
+    
     var itemsByLocation: [[String:Any]] = []
+    
+    
+    func getDate()->String{
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: now)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +47,7 @@ class CreateItemViewController: UIViewController {
 
         //chooseLocation()
         //chooseCategory()
+        
         
     }
     
@@ -80,10 +90,11 @@ class CreateItemViewController: UIViewController {
             if category != "" && !Categories.contains(category){
                 Categories.append(category)
             }
+            let date = getDate()
             
             
             let description = descriptionInput.text ?? ""
-            let item = Item(name: name, category: category, location: location, description: description)
+            let item = Item(name: name, category: category, location: location, description: description, createdDate: date)
             
             print(item.itemData)
             //print(item.itemData["location"] as! String)
