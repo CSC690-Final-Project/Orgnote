@@ -291,6 +291,9 @@
                                     <constraint firstAttribute="height" constant="56" id="GdP-qr-oeF"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="asT-BU-JUq" id="8L7-go-bJ2"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Zb-8j-Rs8">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
