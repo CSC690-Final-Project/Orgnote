@@ -101,6 +101,9 @@ extension ItemByLocationViewController: UITableViewDataSource, UITableViewDelega
         cell.nameLabel.text = item["name"] as? String
         cell.categoryLabel.text = item["category"] as? String
         cell.descriptionLabel.text = item["description"] as? String
+        let imageData:Data = item["image"] as! Data
+        cell.imageView?.image = UIImage(data: imageData)
+        
         //print("here")
         
         
