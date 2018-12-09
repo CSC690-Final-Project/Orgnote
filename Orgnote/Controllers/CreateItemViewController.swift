@@ -35,6 +35,9 @@ class CreateItemViewController: UIViewController {
         super.viewDidLoad()
 
         print("")
+        if (item_Image != nil) {
+            self.newItemImage.setBackgroundImage(item_Image, for: .normal)
+        }
         newItemImage.image = item_Image;
         // Do any additional setup after loading the view.
         
