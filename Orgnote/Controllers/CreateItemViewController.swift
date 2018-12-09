@@ -13,8 +13,7 @@ var Locations: [String] = []
 class CreateItemViewController: UIViewController {
     
     
-    
-    @IBOutlet weak var newItemImage: UIImageView!
+    @IBOutlet weak var newItemImage: UIButton!
     
     @IBOutlet weak var nameInput: UITextField!
     
@@ -38,10 +37,17 @@ class CreateItemViewController: UIViewController {
         if (item_Image != nil) {
             self.newItemImage.setBackgroundImage(item_Image, for: .normal)
         }
-        newItemImage.image = item_Image;
+       // newItemImage.image = item_Image;
         // Do any additional setup after loading the view.
         
         
+    }
+    
+    //click to pick up photo form album
+    //Create a controller and navigate to this controller
+    @IBAction func newItemImageClick(_ sender: Any) {
+        let vc = ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
