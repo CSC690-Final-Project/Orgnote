@@ -11,6 +11,7 @@ import UIKit
 class ItemDetailViewController: UIViewController {
     
     
+    @IBOutlet weak var itemImage: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -36,6 +37,10 @@ print(item)
         categoryLabel.text = item["category"] as? String
         locationLabel.text = item["location"] as? String
         descriptionTextView.text = item["description"] as? String
+        print(item["itemImageData"] as? Data)
+        let imageData: Data = (item["image"] as? Data)!
+        itemImage.image = UIImage(data: imageData)
+        
     }
     
 

@@ -35,6 +35,9 @@ class ItemByLocationViewController: UIViewController {
         //use the location to get the "items" by location
         items = UserDefaults.standard.object(forKey: location) as![[String:Any]]
         
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

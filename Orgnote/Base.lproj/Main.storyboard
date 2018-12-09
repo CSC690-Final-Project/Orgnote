@@ -66,9 +66,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qr-eF-USJ">
-                                <rect key="frame" x="30" y="94" width="315" height="225"/>
+                                <rect key="frame" x="30" y="50" width="315" height="225"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3qr-eF-USJ" secondAttribute="height" multiplier="7:5" id="Q92-yP-lzL"/>
@@ -79,7 +78,6 @@
                                     <action selector="newItemImageClick:" destination="huP-aT-9D8" eventType="touchUpInside" id="EWe-rj-qLm"/>
                                 </connections>
                             </button>
-
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yz-ni-Lvw">
                                 <rect key="frame" x="165" y="305" width="180" height="30"/>
                                 <constraints>
@@ -129,9 +127,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-ZW-pMp">
-
-                                <rect key="frame" x="30" y="463" width="88" height="21"/>
-
+                                <rect key="frame" x="30" y="419" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="write description here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="twr-t7-O1X">
-                                <rect key="frame" x="30" y="491" width="240" height="128"/>
+                                <rect key="frame" x="30" y="447" width="240" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -445,6 +441,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="eak-Ao-mG1">
                                 <rect key="frame" x="30" y="94" width="315" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="dXD-ij-ZDh"/>
+                                    <constraint firstAttribute="height" constant="225" id="x7k-cc-dkP"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAE-Tp-ts6">
                                 <rect key="frame" x="30" y="327" width="50" height="21"/>
@@ -523,6 +523,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="xWs-xy-O7a" id="eHw-8d-sOd"/>
                         <outlet property="descriptionTextView" destination="lSp-fm-tRf" id="Kop-oP-98n"/>
+                        <outlet property="itemImage" destination="eak-Ao-mG1" id="1Qd-S8-UZh"/>
                         <outlet property="locationLabel" destination="Z1f-Lj-AN2" id="MfG-oB-SDE"/>
                         <outlet property="nameLabel" destination="k9Y-P8-d7M" id="x8v-1q-YuS"/>
                     </connections>
