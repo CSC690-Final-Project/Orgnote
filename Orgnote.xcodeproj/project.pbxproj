@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BC78CB121B8648400C8AA3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC78CB021B8648400C8AA3A /* HomeViewController.swift */; };
+		0B5D919721BD029200D6788C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D919621BD029200D6788C /* HomeViewController.swift */; };
+		0B5D919921BD02E800D6788C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D919821BD02E800D6788C /* ViewController.swift */; };
 		0BE32B8F21AE34D000E8A99C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE32B8E21AE34D000E8A99C /* AppDelegate.swift */; };
-		0BE32B9121AE34D000E8A99C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE32B9021AE34D000E8A99C /* ViewController.swift */; };
 		0BE32B9421AE34D000E8A99C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE32B9221AE34D000E8A99C /* Main.storyboard */; };
 		0BE32B9621AE34D300E8A99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE32B9521AE34D300E8A99C /* Assets.xcassets */; };
 		0BE32B9921AE34D300E8A99C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE32B9721AE34D300E8A99C /* LaunchScreen.storyboard */; };
@@ -44,10 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC78CB021B8648400C8AA3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0B5D919621BD029200D6788C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0B5D919821BD02E800D6788C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0BE32B8B21AE34D000E8A99C /* Orgnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orgnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE32B8E21AE34D000E8A99C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0BE32B9021AE34D000E8A99C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0BE32B9321AE34D000E8A99C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BE32B9521AE34D300E8A99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BE32B9821AE34D300E8A99C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,8 @@
 		0BC78CAF21B8640200C8AA3A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0BC78CB021B8648400C8AA3A /* HomeViewController.swift */,
+				0B5D919621BD029200D6788C /* HomeViewController.swift */,
+				0B5D919821BD02E800D6788C /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -136,7 +137,6 @@
 				0BC78CAF21B8640200C8AA3A /* ViewController */,
 				DA78D3E121B0F10F00776E8A /* Controllers */,
 				0BE32B8E21AE34D000E8A99C /* AppDelegate.swift */,
-				0BE32B9021AE34D000E8A99C /* ViewController.swift */,
 				0BE32B9221AE34D000E8A99C /* Main.storyboard */,
 				0BE32B9521AE34D300E8A99C /* Assets.xcassets */,
 				0BE32B9721AE34D300E8A99C /* LaunchScreen.storyboard */,
@@ -360,6 +360,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Orgnote-OrgnoteTests/Pods-Orgnote-OrgnoteTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -367,6 +368,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CameraManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -402,13 +404,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5D919921BD02E800D6788C /* ViewController.swift in Sources */,
 				DAB658C921B6665B00549E82 /* ItemCell.swift in Sources */,
 				DAB658C521B65EAE00549E82 /* LocationViewController.swift in Sources */,
 				DAB658C321B64EA200549E82 /* LocationViewCell.swift in Sources */,
 				DA78D3E521B0FA0B00776E8A /* Item.swift in Sources */,
-				0BE32B9121AE34D000E8A99C /* ViewController.swift in Sources */,
-				0BC78CB121B8648400C8AA3A /* HomeViewController.swift in Sources */,
 				DAB658CB21B66B4A00549E82 /* ItemDetailViewController.swift in Sources */,
+				0B5D919721BD029200D6788C /* HomeViewController.swift in Sources */,
 				DAB658C721B6663D00549E82 /* ItemByLocationViewController.swift in Sources */,
 				DA78D3E321B0F65B00776E8A /* CreateItemViewController.swift in Sources */,
 				0BE32B8F21AE34D000E8A99C /* AppDelegate.swift in Sources */,
@@ -588,13 +590,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 47S482397A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Orgnote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoqian-Huang.Orgnote";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,13 +614,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 47S482397A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Orgnote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoqian-Huang.Orgnote";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

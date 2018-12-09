@@ -28,9 +28,14 @@ class CreateItemViewController: UIViewController {
     
     var itemsByLocation: [[String:Any]] = []
     
+    //item_Image
+    var item_Image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("")
+        newItemImage.image = item_Image;
         // Do any additional setup after loading the view.
         
         
@@ -39,6 +44,7 @@ class CreateItemViewController: UIViewController {
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func addButton(_ sender: Any) {
