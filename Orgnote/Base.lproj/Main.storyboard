@@ -68,6 +68,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qr-eF-USJ">
                                 <rect key="frame" x="30" y="94" width="315" height="225"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3qr-eF-USJ" secondAttribute="height" multiplier="7:5" id="Q92-yP-lzL"/>
                                     <constraint firstAttribute="width" constant="315" id="dgd-mn-rcY"/>
