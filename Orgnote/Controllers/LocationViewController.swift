@@ -9,6 +9,13 @@
 import UIKit
 
 class LocationViewController: UIViewController {
+    
+    @IBOutlet weak var locationSearchBar: UISearchBar!
+    var searchLocations:[String] = []
+    var searching = false
+    
+    //var locations1: [String] = ["11","hi", "55", "44", "tt"]
+    //Locations = ["11","hi", "55", "44", "tt"]
 
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -17,13 +24,15 @@ class LocationViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //example
-        Locations = ["11","hi", "55", "44", "tt"]
-        //print("start")
+        //Locations = ["San Francisco","California", "San Jose", "San Diego", "San Francisco State"]
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
     // MARK: - Navigation
 
@@ -34,35 +43,71 @@ class LocationViewController: UIViewController {
         
         let cell = sender as! UITableViewCell
         if let indexPath = tableView.indexPath(for: cell){
-            let location = Locations[indexPath.row]
+            
+            var location: String = ""
+            
+            if searching{
+                location = searchLocations[indexPath.row]
+            }else{
+                location = Locations[indexPath.row]
+            }
+            
             let itemByLocationViewController = segue.destination as! ItemByLocationViewController
             itemByLocationViewController.location = location
            
         }
     }
-    
-
 }
 
 extension LocationViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Locations.count
+        
+        if searching{
+            return searchLocations.count
+        }else{
+            return Locations.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationViewCell") as! LocationViewCell
-        let location = Locations[indexPath.row]
+        
+        var location:String = ""
+        
+        if searching{
+            location = searchLocations[indexPath.row]
+        }else{
+            location = Locations[indexPath.row]
+        }
         
         cell.locationLabel.text = location
-        //print("here")
-        
-
-        
-        
         
         return cell
     }
     
+}
+
+extension LocationViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searching = false
+        tableView.reloadData()
+    
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchLocations = searchText.isEmpty ? Locations: Locations.filter({(location: String) -> Bool in
+            // If location name matches the searchText, return true to include it
+            
+            return (location).range(of: searchText, options: .caseInsensitive) != nil
+            
+        })
+        
+        searching = true
+        tableView.reloadData()
+    }
     
 }

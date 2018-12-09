@@ -39,14 +39,26 @@ print(item)
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        let createItemController = segue.destination as! CreateItemViewController
+        createItemController.isItemEditing = true
+        createItemController.addButton.title = "Save"
+        //createItemController.nameInput.text = nameLabel.text
+        //createItemController.categoryInput.text = categoryLabel.text
+        //createItemController.locationInput.text = locationLabel.text
+        //createItemController.descriptionInput.text = descriptionTextView.text
+        createItemController.editingItem = item
+        
     }
-    */
+    
+    
+    
 
 }

@@ -16,10 +16,15 @@ class Item {
 
     static var id: Int = 0
     
-    init(name: String, category: String, location: String, description: String) {
+    init(name: String, category: String, location: String, description: String, createdDate: String) {
         
         Item.id += 1
-        self.itemData = ["id":Item.id, "name":name, "category": category, "location":location, "description": description]
+        self.itemData = ["id":Item.id,
+                         "name":name,
+                         "category": category,
+                         "location":location,
+                         "description": description,
+                         "created_date": createdDate]
     }
     
     
