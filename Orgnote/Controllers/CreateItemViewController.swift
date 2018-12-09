@@ -56,7 +56,11 @@ class CreateItemViewController: UIViewController {
         super.viewDidLoad()
 
         print("")
+        
         if (item_Image != nil) {
+            self.newItemImage.setBackgroundImage(item_Image, for: .normal)
+        }else{
+            item_Image = UIImage(named: "placeholder")
             self.newItemImage.setBackgroundImage(item_Image, for: .normal)
         }
        // newItemImage.image = item_Image;
@@ -134,7 +138,15 @@ class CreateItemViewController: UIViewController {
             
             
             let description = descriptionInput.text ?? ""
-            let item = Item(name: name, category: category, location: location, description: description, createdDate: date)
+            
+            var imageData:Data?
+            //convert image to data
+            if item_Image != nil {
+                imageData = item_Image?.pngData() as! Data
+
+            }
+
+            let item = Item(name: name, category: category, location: location, description: description, createdDate: date, itemImageData: imageData! )
             
             print(item.itemData)
             //print(item.itemData["location"] as! String)
