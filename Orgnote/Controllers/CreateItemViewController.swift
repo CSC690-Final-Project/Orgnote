@@ -14,8 +14,7 @@ var Categories: [String] = []
 class CreateItemViewController: UIViewController {
     
     
-    
-    @IBOutlet weak var newItemImage: UIImageView!
+    @IBOutlet weak var newItemImage: UIButton!
     
     @IBOutlet weak var nameInput: UITextField!
     
@@ -50,9 +49,17 @@ class CreateItemViewController: UIViewController {
         return dateFormatter.string(from: now)
     }
     
+    //item_Image
+    var item_Image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("")
+        if (item_Image != nil) {
+            self.newItemImage.setBackgroundImage(item_Image, for: .normal)
+        }
+       // newItemImage.image = item_Image;
         // Do any additional setup after loading the view.
         //sample locations, delete after
         //Categories = ["San Francisco","California", "San Jose", "San Diego", "San Francisco State"]
@@ -76,9 +83,17 @@ class CreateItemViewController: UIViewController {
         chooseCategory()
     }
     
+    //click to pick up photo form album
+    //Create a controller and navigate to this controller
+    @IBAction func newItemImageClick(_ sender: Any) {
+        let vc = ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func addButton(_ sender: Any) {
