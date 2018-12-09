@@ -17,6 +17,12 @@ class HomeViewController: UIViewController {
     }
     
 
+    //click here to take photos
+    
+    @IBAction func cameraButtonClick(_ sender: Any) {
+        let vc = ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     /*
     // MARK: - Navigation
 
