@@ -625,7 +625,7 @@
         <scene sceneID="pF9-2t-vWa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ou-JH-dSF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All" id="aZc-Km-4Rp"/>
+                    <tabBarItem key="tabBarItem" title="All" image="all" id="aZc-Km-4Rp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jOL-CA-pj4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -660,6 +660,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="all" width="30" height="30"/>
         <image name="feed_tab" width="25" height="25"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="location" width="30" height="45"/>
