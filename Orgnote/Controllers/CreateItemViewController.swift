@@ -14,8 +14,7 @@ var Categories: [String] = []
 class CreateItemViewController: UIViewController {
     
     
-    
-    @IBOutlet weak var newItemImage: UIImageView!
+    @IBOutlet weak var newItemImage: UIButton!
     
     @IBOutlet weak var nameInput: UITextField!
     
@@ -50,9 +49,21 @@ class CreateItemViewController: UIViewController {
         return dateFormatter.string(from: now)
     }
     
+    //item_Image
+    var item_Image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("")
+        
+        if (item_Image != nil) {
+            self.newItemImage.setBackgroundImage(item_Image, for: .normal)
+        }else{
+            item_Image = UIImage(named: "placeholder")
+            self.newItemImage.setBackgroundImage(item_Image, for: .normal)
+        }
+       // newItemImage.image = item_Image;
         // Do any additional setup after loading the view.
         //sample locations, delete after
         //Categories = ["San Francisco","California", "San Jose", "San Diego", "San Francisco State"]
@@ -66,6 +77,50 @@ class CreateItemViewController: UIViewController {
             descriptionInput.text = editingItem["description"] as? String
         }
         
+        
+        // Listen for keyboard events
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+    }
+    
+    deinit{
+        //stop listening to keyboard
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+
+    }
+    
+    
+    @objc func keyboardWillChange(notification: Notification){
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            else
+            {
+                return
+                
+        }
+        
+        if notification.name == UIResponder.keyboardWillShowNotification ||
+            notification.name == UIResponder.keyboardWillChangeFrameNotification{
+            view.frame.origin.y = -keyboardRect.height/3
+            
+        }else{
+            view.frame.origin.y = 0
+        }
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.nameInput.delegate = self
+        self.categoryInput.delegate = self
+        self.locationInput.delegate = self
+        //self.descriptionInput.delegate = self
     }
     
     @IBAction func selectLocation(_ sender: Any) {
@@ -76,9 +131,17 @@ class CreateItemViewController: UIViewController {
         chooseCategory()
     }
     
+    //click to pick up photo form album
+    //Create a controller and navigate to this controller
+    @IBAction func newItemImageClick(_ sender: Any) {
+        let vc = ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func addButton(_ sender: Any) {
@@ -119,7 +182,15 @@ class CreateItemViewController: UIViewController {
             
             
             let description = descriptionInput.text ?? ""
-            let item = Item(name: name, category: category, location: location, description: description, createdDate: date)
+            
+            var imageData:Data?
+            //convert image to data
+            if item_Image != nil {
+                imageData = item_Image?.pngData() as! Data
+
+            }
+
+            let item = Item(name: name, category: category, location: location, description: description, createdDate: date, itemImageData: imageData! )
             
             print(item.itemData)
             //print(item.itemData["location"] as! String)
@@ -245,3 +316,14 @@ class CreateItemViewController: UIViewController {
     */
 
 }
+
+extension CreateItemViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+}
+
+

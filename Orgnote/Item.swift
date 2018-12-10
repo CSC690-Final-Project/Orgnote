@@ -13,10 +13,12 @@ import Foundation
 class Item {
     
     var itemData: [String:Any]
+    //var itemImage: Data? = nil
+
 
     static var id: Int = 0
     
-    init(name: String, category: String, location: String, description: String, createdDate: String) {
+    init(name: String, category: String, location: String, description: String, createdDate: String, itemImageData: Data) {
         
         Item.id += 1
         self.itemData = ["id":Item.id,
@@ -24,6 +26,7 @@ class Item {
                          "category": category,
                          "location":location,
                          "description": description,
+                         "image": itemImageData,
                          "created_date": createdDate]
     }
     

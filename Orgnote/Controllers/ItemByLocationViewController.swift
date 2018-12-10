@@ -35,6 +35,9 @@ class ItemByLocationViewController: UIViewController {
         //use the location to get the "items" by location
         items = UserDefaults.standard.object(forKey: location) as![[String:Any]]
         
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -98,6 +101,9 @@ extension ItemByLocationViewController: UITableViewDataSource, UITableViewDelega
         cell.nameLabel.text = item["name"] as? String
         cell.categoryLabel.text = item["category"] as? String
         cell.descriptionLabel.text = item["description"] as? String
+        let imageData:Data = item["image"] as! Data
+        cell.imageView?.image = UIImage(data: imageData)
+        
         //print("here")
         
         
