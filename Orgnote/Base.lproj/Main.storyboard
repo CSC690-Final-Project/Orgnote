@@ -18,44 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMG-f9-xOw">
-                                <rect key="frame" x="200" y="182" width="150" height="150"/>
-                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="7ho-40-PA3"/>
-                                    <constraint firstAttribute="width" constant="150" id="Ycp-ma-fxq"/>
-                                </constraints>
-                                <state key="normal" image="add"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="bwd-5m-Bzs" kind="presentation" id="qjv-L3-WTz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-Gd-pGu">
-                                <rect key="frame" x="31" y="374" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.98178390800000004" blue="0.3997286491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Location"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-Wv-2vH">
-                                <rect key="frame" x="209" y="373" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.98178390800000004" blue="0.3997286491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Setting"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgnote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-nx-dEX">
-                                <rect key="frame" x="114" y="75" width="147" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="dN5-IO-8tn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="64"/>
-                                <color key="textColor" red="0.92133218050003052" green="0.49682820976993425" blue="0.063810670579510259" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-Qk-fMX">
                                 <rect key="frame" x="25" y="182" width="150" height="150"/>
                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
@@ -73,17 +35,75 @@
                                     <action selector="cameraButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3H3-AA-URc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMG-f9-xOw">
+                                <rect key="frame" x="200" y="182" width="150" height="150"/>
+                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7ho-40-PA3"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ycp-ma-fxq"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bwd-5m-Bzs" kind="presentation" id="qjv-L3-WTz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-Gd-pGu">
+                                <rect key="frame" x="25" y="373" width="150" height="150"/>
+                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="JYQ-2Z-2gn"/>
+                                    <constraint firstAttribute="width" constant="150" id="UpY-mZ-3VA"/>
+                                </constraints>
+                                <state key="normal" title="" image="box"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgnote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-nx-dEX">
+                                <rect key="frame" x="114" y="75" width="147" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dN5-IO-8tn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="64"/>
+                                <color key="textColor" red="0.92133218050003052" green="0.49682820976993425" blue="0.063810670579510259" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-Wv-2vH">
+                                <rect key="frame" x="200" y="373" width="150" height="150"/>
+                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6nq-o4-kBa"/>
+                                    <constraint firstAttribute="height" constant="150" id="de7-DJ-cIj"/>
+                                </constraints>
+                                <state key="normal" image="setting"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TMG-f9-xOw" firstAttribute="top" secondItem="PKF-nx-dEX" secondAttribute="bottom" constant="47" id="114-VT-cW0"/>
                             <constraint firstItem="6kN-Qk-fMX" firstAttribute="top" secondItem="PKF-nx-dEX" secondAttribute="bottom" constant="47" id="3iH-iT-pvy"/>
+                            <constraint firstItem="Sha-Wv-2vH" firstAttribute="top" secondItem="TMG-f9-xOw" secondAttribute="bottom" constant="41" id="47n-SJ-k8D"/>
                             <constraint firstItem="6kN-Qk-fMX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="6cL-Ny-CcL"/>
+                            <constraint firstItem="Sha-Wv-2vH" firstAttribute="leading" secondItem="Hqz-Gd-pGu" secondAttribute="trailing" constant="25" id="7JA-Y9-nuI"/>
                             <constraint firstItem="TMG-f9-xOw" firstAttribute="leading" secondItem="6kN-Qk-fMX" secondAttribute="trailing" constant="25" id="Ae6-LP-HFE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TMG-f9-xOw" secondAttribute="trailing" constant="25" id="CED-q8-jHN"/>
                             <constraint firstItem="PKF-nx-dEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="K3b-lQ-Fvn"/>
                             <constraint firstItem="PKF-nx-dEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSL-nL-2Hc"/>
                             <constraint firstItem="PKF-nx-dEX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="KvC-Pg-Zs9"/>
+                            <constraint firstItem="Sha-Wv-2vH" firstAttribute="leading" secondItem="TMG-f9-xOw" secondAttribute="leading" id="gbq-wq-UKj"/>
+                            <constraint firstItem="Sha-Wv-2vH" firstAttribute="top" secondItem="Hqz-Gd-pGu" secondAttribute="top" id="jIX-kh-5LB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -697,10 +717,12 @@
     <resources>
         <image name="add" width="115.19999694824219" height="115.19999694824219"/>
         <image name="all" width="43.5" height="43.5"/>
+        <image name="box" width="120" height="120"/>
         <image name="camera" width="90" height="90"/>
         <image name="home" width="58" height="58"/>
         <image name="location" width="43.5" height="43.5"/>
         <image name="placeholder" width="225" height="225"/>
+        <image name="setting" width="115.19999694824219" height="115.19999694824219"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="55s-pt-Vg7"/>
