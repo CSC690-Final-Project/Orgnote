@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-Qk-fMX">
-                                <rect key="frame" x="31" y="119" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-Qk-fMX">
+                                <rect key="frame" x="94" y="182" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.98178390800000004" blue="0.3997286491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Camera"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="insta_camera_btn"/>
                                 <connections>
                                     <action selector="cameraButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3H3-AA-URc"/>
                                 </connections>
@@ -549,11 +549,11 @@
             </objects>
             <point key="canvasLocation" x="2944.8000000000002" y="954.87256371814101"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="AzG-BI-1Ss">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iVc-OQ-vXF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mX8-og-we2"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="feed_tab" id="mX8-og-we2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jwj-9q-C5L">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -572,7 +572,7 @@
         <scene sceneID="rgT-cp-bfM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wCF-XV-eo5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Location" id="8Af-7X-2Ea"/>
+                    <tabBarItem key="tabBarItem" title="Location" image="location" id="8Af-7X-2Ea"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Aqd-pU-M61">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -626,6 +626,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="feed_tab" width="25" height="25"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="location" width="30" height="45"/>
         <image name="placeholder" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
