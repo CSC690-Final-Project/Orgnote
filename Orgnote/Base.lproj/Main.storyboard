@@ -65,9 +65,6 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="2XC-7g-Xgl" kind="show" id="u8m-RF-5sl"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgnote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-nx-dEX">
                                 <rect key="frame" x="114" y="82" width="147" height="60"/>
@@ -318,7 +315,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--Location View Controller-->
+        <!--Title-->
         <scene sceneID="U9g-jY-cVK">
             <objects>
                 <viewController id="2XC-7g-Xgl" customClass="LocationViewController" customModule="Orgnote" customModuleProvider="target" sceneMemberID="viewController">
@@ -382,7 +379,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQU-pt-COy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gZ4-nf-IXJ"/>
+                    <navigationItem key="navigationItem" title="Title" id="Qag-1a-VQY"/>
                     <connections>
                         <outlet property="locationSearchBar" destination="x0f-FR-HRt" id="hg2-sK-Vgl"/>
                         <outlet property="tableView" destination="ep3-VI-Yb1" id="CS9-BK-Mpy"/>
@@ -766,7 +763,6 @@
         <image name="setting" width="115.19999694824219" height="115.19999694824219"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u8m-RF-5sl"/>
         <segue reference="55s-pt-Vg7"/>
     </inferredMetricsTieBreakers>
 </document>

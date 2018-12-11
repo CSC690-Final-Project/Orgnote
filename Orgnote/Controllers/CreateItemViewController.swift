@@ -105,7 +105,7 @@ class CreateItemViewController: UIViewController {
         
         if notification.name == UIResponder.keyboardWillShowNotification ||
             notification.name == UIResponder.keyboardWillChangeFrameNotification{
-            view.frame.origin.y = -keyboardRect.height/3
+            view.frame.origin.y = -keyboardRect.height
             
         }else{
             view.frame.origin.y = 0
