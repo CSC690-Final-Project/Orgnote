@@ -10,6 +10,7 @@ import UIKit
 
 class ItemCell: UITableViewCell {
     
+    @IBOutlet weak var itemImage: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
