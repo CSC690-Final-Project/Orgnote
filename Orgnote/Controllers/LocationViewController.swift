@@ -95,6 +95,7 @@ extension LocationViewController: UISearchBarDelegate {
         searchBar.text = ""
         searching = false
         tableView.reloadData()
+        searchBar.resignFirstResponder()
     
     }
     
