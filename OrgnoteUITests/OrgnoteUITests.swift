@@ -31,11 +31,11 @@ class OrgnoteUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func add(){
+    func add() {
         //
     }
     
-    func cancel(){
+    func cancel() {
         //
     }
 
