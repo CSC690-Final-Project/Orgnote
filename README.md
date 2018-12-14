@@ -6,20 +6,24 @@
 
 The following **required** user stories are complete:
 
-- [ ] User can add an item with item name, category, location, description. 
-- [ ] The app can save added item in device. 
-- [ ] User can view all item in list view.
-- [ ] User can take add a photo per item.
-- [ ] User can view item details. 
-- [ ] User can delete item.
+- [x] User can add an item with item name, category, location, description. 
+- [x] The app can save added item in device. 
+- [x] User can view all item in list view.
+- [x] User can take add a photo per item.
+- [x] User can choose picture from album for per item.
+- [x] User can view item details. 
+
 
 The following **stretch** user stories are implemented:
 
-- [ ] User can search item in all item list view.
-- [ ] User can search location in location list view. 
-- [ ] User can view items in list filter by locations.
+- [x] User can search item in all item list view.
+- [x] User can search location in location list view. 
+- [x] User can view items in list filter by locations.
+- [x] User can select category when user created new item.
+- [x] User can select location when user created new item.
 - [ ] User can edit and modify item data, such as location, name, change photo, description.
-- [ ] User can clear all data in Setting
+- [ ] User can clear all data in Setting.
+- [ ] User can delete item.
 
 
 ## Workflow
