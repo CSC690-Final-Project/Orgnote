@@ -11,7 +11,7 @@ target 'Orgnote' do
   target 'OrgnoteTests' do
     pod 'Alamofire', '~> 4.7'
     pod 'AlamofireImage', '~> 3.4'
-pod 'CameraManager', '~> 4.3'
+
   end
 
   # target 'OrgnoteUITests' do
