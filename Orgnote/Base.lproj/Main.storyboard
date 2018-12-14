@@ -674,7 +674,7 @@
                     <view key="view" contentMode="scaleToFill" id="pZ4-oa-pgy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97372907399999997" green="0.84521806239999997" blue="0.3684974909" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="zef-Ks-5Sj"/>
                     </view>
                     <navigationItem key="navigationItem" id="BMJ-Lc-kjW"/>
