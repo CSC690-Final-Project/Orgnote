@@ -65,6 +65,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2XC-7g-Xgl" kind="show" id="bxS-Ev-oEA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgnote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-nx-dEX">
                                 <rect key="frame" x="114" y="82" width="147" height="60"/>
@@ -762,6 +765,7 @@
         <image name="setting" width="115.19999694824219" height="115.19999694824219"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bxS-Ev-oEA"/>
         <segue reference="55s-pt-Vg7"/>
     </inferredMetricsTieBreakers>
 </document>
